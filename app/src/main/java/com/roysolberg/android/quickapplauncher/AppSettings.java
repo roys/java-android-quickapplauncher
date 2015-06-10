@@ -12,7 +12,6 @@ public class AppSettings {
 	private final static Logger logger = Logger.getLogger(AppSettings.class.getSimpleName(), MainActivity.LOG_LEVEL);
 
 	protected final static String KEY_HAS_RUN_APP = "has_run_app";
-	protected final static String KEY_NUM_OF_RUNS = "num_of_runs";
 	protected final static String KEY_INDEX_TIMESTAMP = "index_timestamp";
 	protected final static String KEY_START_APP_WITH_KEYS_VISIBLE = "start_app_with_keys_visible";
 	
@@ -45,14 +44,6 @@ public class AppSettings {
 
 	public void setHasRunApp(boolean uploaded) {
 		getEditor().putBoolean(KEY_HAS_RUN_APP, uploaded).commit();
-	}
-
-	public int getNumberOfRuns() {
-		return sharedPreferences.getInt(KEY_NUM_OF_RUNS, 0);
-	}
-
-	public void incNumberOfRuns() {
-		getEditor().putInt(KEY_NUM_OF_RUNS, getNumberOfRuns() + 1).commit();		
 	}
 
 	public boolean startAppWithKeysVisible() {

@@ -3,6 +3,9 @@ Changelog for Quick App Launcher
 List of changes, newest changes first.
 ('+' = new feature, '-' = removed feature, '*' = changed feature)
 
+Version 1.0.4
+ - Removed ads and therefore also permissions for accessing internet and network state.
+ * Library upgrade.
 Version 1.0.3
  - Removed permission for in app purchases as this was never used.
  * Bugfix: App could crash if it was exited quickly.

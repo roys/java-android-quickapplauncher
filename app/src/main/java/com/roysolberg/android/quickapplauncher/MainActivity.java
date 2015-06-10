@@ -1,7 +1,5 @@
 package com.roysolberg.android.quickapplauncher;
 
-import java.util.List;
-
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -31,14 +29,14 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ProgressBar;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdView;
 import com.roysolberg.android.quickapplauncher.fragment.RecentlyInstalledFragment;
 import com.roysolberg.android.quickapplauncher.fragment.RecentlyUpdatedFragment;
 import com.roysolberg.android.quickapplauncher.fragment.SearchFragment;
 import com.roysolberg.android.quickapplauncher.receiver.AppChangeReceiver;
 import com.roysolberg.android.util.Logger;
 import com.roysolberg.android.util.Toaster;
+
+import java.util.List;
 
 public class MainActivity extends FragmentActivity implements OnPageChangeListener {
 
@@ -118,7 +116,6 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
 	protected void init(){
 		appSearchAsyncTask = new AppSearchAsyncTask();
 		appSearchAsyncTask.execute();
-		loadAd();
 	}
 	
 	@Override
@@ -380,22 +377,6 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
 		currentPage = page;
 	}
 	
-	protected void loadAd() {
-		if(shouldDisplayAd()){
-			AdView adView = (AdView) findViewById(R.id.adView);
-			adView.setVisibility(View.VISIBLE);
-			adView.loadAd(new AdRequest());
-		}
-	}
-	
-	protected boolean shouldDisplayAd() {
-		if(appSettings.getNumberOfRuns() < 3){
-			appSettings.incNumberOfRuns();
-			return false;
-		}
-		return true;
-	}
-
 	public class UpdateFragmentReceiver extends BroadcastReceiver{
 		@Override
 		public void onReceive(Context context, Intent intent) {

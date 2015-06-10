@@ -30,14 +30,4 @@
         android:padding="10dp"
         android:visibility="gone" />
 
-    <com.google.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="a1514f7983896ae"
-        ads:loadAdOnCreate="false"
-        ads:testDevices="TEST_EMULATOR,C2B30944FFBB3BDFE324474AF9C20328"
-        android:visibility="gone" />
-
 </LinearLayout>
