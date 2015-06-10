@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Quick App Launcher</string>
+    <string name="app_description">Quick App Launcher lets you quickly find your apps by a fast search on either name or description. You also get a list of the most recently installed apps.</string>
+    <string name="menu_settings">Settings</string>
+
 </resources>

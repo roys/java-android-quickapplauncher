@@ -1,0 +1,60 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:title="Notifications" >
+        <CheckBoxPreference
+            android:key="play_notification_sound"
+            android:defaultValue="true"
+            android:title="Play doorbell sound"
+            />
+        <CheckBoxPreference
+            android:key="play_notification_sound_at_night"
+            android:defaultValue="false"
+            android:title="Play doorbell sound at night"
+            android:summaryOff="Silent between 23:00 and 06:00"
+            android:summaryOn="Sound will always be played"
+            android:dependency="play_notification_sound"
+            />
+        <RingtonePreference
+            android:key="notification_sound"
+            android:ringtoneType="notification"
+            android:title="Doorbell sound"
+            android:summary="Select sound of doorbell"
+            android:dependency="play_notification_sound"
+            android:showSilent="false"
+             />
+        <CheckBoxPreference
+            android:key="vibrate"
+            android:defaultValue="false"
+            android:title="Vibration"
+            android:summary="Vibration is not available on all devices."
+            />
+        <CheckBoxPreference
+            android:key="blink_led"
+            android:defaultValue="true"
+            android:title="Blink LED"
+            android:summary="LED is not available on all devices."
+            />
+        <CheckBoxPreference
+            android:key="pop_up_notifications"
+            android:defaultValue="true"
+            android:title="Pop up notifications"
+            android:summary="Only messages with phone numbers will pop up."
+            />
+        <CheckBoxPreference
+            android:key="notify_watch"
+            android:defaultValue="true"
+            android:title="Notify your watch"
+            android:summary="Supports the Pebble watch."
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Misc." >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="display_welcome_tab"
+            android:summary="App needs to be restarted before change takes place."
+            android:title="Display welcome tab" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

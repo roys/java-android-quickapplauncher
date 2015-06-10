@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    >
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher"
+        android:contentDescription="app icon"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:id="@+id/textView_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageview"
+        android:layout_toRightOf="@+id/imageview"
+        android:text="Quick App Launcher"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#999" />
+
+    <TextView
+        android:id="@+id/textView_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_line1"
+        android:layout_below="@+id/textView_line1"
+        android:textSize="14sp"
+        android:text="Cool launcher"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLines="1" />
+</RelativeLayout>
